@@ -1,0 +1,104 @@
+.experience-section {
+  position: relative;
+  background-color: #111114;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 48px;
+  padding: 42px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.25s ease;
+}
+
+.experience-row:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.experience-period {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  color: #8e8e93;
+  letter-spacing: 0.02em;
+}
+
+.experience-category {
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.experience-right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-role-title {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0 0 14px 0;
+}
+
+.experience-role-desc {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--color-text-light);
+  max-width: 760px;
+  margin: 0 0 20px 0;
+}
+
+.experience-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d1d6;
+}
+
+.experience-bullet-caret {
+  color: var(--color-primary);
+  font-size: 12px;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+
+@media (max-width: 860px) {
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 32px 0;
+  }
+}
