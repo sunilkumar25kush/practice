@@ -474,4 +474,36 @@ body {
   }
 }
 
+/* Reference Theme Utility Classes & Animation */
+:root {
+  --ember: #A02A22;
+  --ember-bright: #c43229;
+  --ember-orange: #FC6B2F;
+  --ash: #B5B5B5;
+  --silver: #EDF0F3;
+  --cloud: #FFFFFF;
+  --iron: rgba(255, 255, 255, 0.1);
+  --void: #111114;
+}
+
+.bg-ember { background-color: var(--ember); }
+.bg-ember-bright { background-color: var(--ember-bright); }
+.hover\:bg-ember-bright:hover { background-color: var(--ember-bright); }
+.text-ember { color: var(--ember); }
+.hover\:text-ember:hover { color: var(--ember); }
+.text-ash { color: var(--ash); }
+.text-silver { color: var(--silver); }
+.text-cloud { color: var(--cloud); }
+
+@keyframes reveal-up {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(0%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-scroll-line {
+  animation: reveal-up 2s ease-in-out infinite;
+}
+
+
 

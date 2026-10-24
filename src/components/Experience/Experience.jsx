@@ -4,7 +4,7 @@ export default function Experience() {
   const experiences = [
     {
       period: '2026 — Present',
-      category: 'FREELANCE / INDEPENDENT',
+      category: 'Freelance / Independent',
       role: 'Full Stack Developer',
       description:
         'Building premium web experiences for clients worldwide. Specializing in interactive frontends, scalable backends, and AI-powered applications.',
@@ -16,7 +16,7 @@ export default function Experience() {
     },
     {
       period: '2026 — Present',
-      category: 'OPEN SOURCE',
+      category: 'Open Source',
       role: 'Contributor & Maintainer',
       description:
         'Contributing to the developer ecosystem through open-source projects, libraries, and educational content.',
@@ -43,7 +43,7 @@ export default function Experience() {
     },
     {
       period: '2023 — 2024',
-      category: 'SELF-DIRECTED LEARNING',
+      category: 'Self-Directed Learning',
       role: 'Creative Technologist',
       description:
         'Intensive self-education period exploring web technologies, creative coding, and modern development practices.',
@@ -55,47 +55,116 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="section experience-section" style={{ backgroundColor: '#111114', paddingTop: '110px', paddingBottom: '120px' }}>
-      <div className="container">
-        {/* Section Header Matching Screenshot 7 */}
-        <div style={{ marginBottom: '64px' }}>
+    <section
+      id="experience"
+      className="relative py-16 sm:py-24 md:py-40 overflow-hidden"
+      style={{
+        position: 'relative',
+        padding: 'clamp(80px, 12vh, 140px) 0',
+        backgroundColor: '#111114',
+        overflow: 'hidden',
+        fontFamily: 'var(--font-poppins), sans-serif',
+      }}
+    >
+      {/* Top Border Divider */}
+      <div
+        className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-iron to-transparent"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: '1px',
+          background: 'linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Top 1/3 Ambient Glow */}
+      <div
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[90vw] max-w-[600px] h-[300px] rounded-full opacity-15 pointer-events-none blur-[150px]"
+        style={{
+          position: 'absolute',
+          top: '33%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: 'min(90vw, 600px)',
+          height: '300px',
+          borderRadius: '50%',
+          opacity: 0.15,
+          pointerEvents: 'none',
+          filter: 'blur(150px)',
+          backgroundColor: 'var(--ember)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div
+        className="section-container relative z-10 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto"
+        style={{
+          position: 'relative',
+          zIndex: 10,
+          maxWidth: '1240px',
+          margin: '0 auto',
+          padding: '0 clamp(16px, 4vw, 36px)',
+          boxSizing: 'border-box',
+        }}
+      >
+        {/* Section Header */}
+        <div style={{ marginBottom: 'clamp(48px, 8vh, 72px)' }}>
           <div
+            className="flex items-center gap-2 mb-3"
             style={{
-              display: 'inline-flex',
+              display: 'flex',
               alignItems: 'center',
-              gap: '10px',
-              color: 'var(--color-primary)',
-              fontSize: '12px',
-              fontWeight: 800,
-              letterSpacing: '0.24em',
-              textTransform: 'uppercase',
-              marginBottom: '16px',
+              gap: '8px',
+              marginBottom: '12px',
             }}
           >
-            <span style={{ width: '22px', height: '2px', backgroundColor: 'var(--color-primary)', display: 'inline-block' }} />
-            <span>EXPERIENCE</span>
+            <span
+              className="w-8 h-[2px] bg-ember inline-block rounded-full"
+              style={{
+                width: '32px',
+                height: '2px',
+                backgroundColor: 'var(--ember)',
+                display: 'inline-block',
+                borderRadius: '9999px',
+              }}
+            />
+            <span
+              className="text-ember text-xs font-bold tracking-[0.25em] uppercase"
+              style={{
+                color: 'var(--ember)',
+                fontSize: '12px',
+                fontWeight: 700,
+                letterSpacing: '0.25em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Experience
+            </span>
           </div>
 
           <h2
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight"
             style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(36px, 5.5vw, 64px)',
+              fontSize: 'clamp(28px, 5.5vw, 56px)',
               fontWeight: 800,
               color: '#ffffff',
-              letterSpacing: '-0.02em',
               lineHeight: 1.1,
-              marginBottom: '16px',
+              letterSpacing: '-0.02em',
+              margin: '0 0 16px 0',
             }}
           >
             Where I've Been
           </h2>
 
           <p
+            className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-ash max-w-xl leading-relaxed font-normal"
             style={{
-              fontFamily: 'var(--font-primary)',
-              fontSize: 'clamp(14px, 1.25vw, 16px)',
-              color: 'var(--color-text-light)',
-              maxWidth: '620px',
+              color: '#B5B5B5',
+              fontSize: 'clamp(14px, 1.2vw, 17px)',
+              maxWidth: '580px',
               lineHeight: 1.6,
               margin: 0,
             }}
@@ -104,25 +173,136 @@ export default function Experience() {
           </p>
         </div>
 
-        {/* Experience List Matching Screenshot 7 & 8 */}
-        <div className="experience-list">
-          {experiences.map((item, index) => (
-            <div key={index} className="experience-row">
+        {/* Experience Items List */}
+        <div
+          className="space-y-8 sm:space-y-12 max-w-4xl mx-auto"
+          style={{
+            maxWidth: '1000px',
+            margin: '0 auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 'clamp(32px, 5vh, 48px)',
+          }}
+        >
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="exp-item group pb-8 sm:pb-12 border-b border-white/10 last:border-b-0 flex flex-col md:flex-row md:items-start justify-between gap-4 sm:gap-6 md:gap-12 transition-colors duration-300"
+              style={{
+                borderBottom: index === experiences.length - 1 ? 'none' : '1px solid rgba(255, 255, 255, 0.1)',
+                paddingBottom: index === experiences.length - 1 ? 0 : 'clamp(28px, 4vh, 40px)',
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'flex-start',
+                justifyContent: 'space-between',
+                gap: 'clamp(24px, 4vw, 48px)',
+                flexWrap: 'wrap',
+              }}
+            >
               {/* Left Column: Period & Tag */}
-              <div className="experience-left-col">
-                <span className="experience-period">{item.period}</span>
-                <span className="experience-category">{item.category}</span>
+              <div
+                className="md:w-1/3 flex-shrink-0"
+                style={{
+                  width: 'min(100%, 260px)',
+                  flexShrink: 0,
+                }}
+              >
+                <span
+                  className="text-xs font-mono font-medium text-ash tracking-wider block mb-1"
+                  style={{
+                    color: '#B5B5B5',
+                    fontSize: '12px',
+                    fontFamily: 'var(--font-mono)',
+                    letterSpacing: '0.05em',
+                    display: 'block',
+                    marginBottom: '4px',
+                  }}
+                >
+                  {exp.period}
+                </span>
+                <span
+                  className="text-xs sm:text-sm font-semibold tracking-wider uppercase block font-mono text-ember"
+                  style={{
+                    color: 'var(--ember)',
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    display: 'block',
+                    fontFamily: 'var(--font-mono)',
+                  }}
+                >
+                  {exp.category}
+                </span>
               </div>
 
-              {/* Right Column: Title, Description & Bullets */}
-              <div className="experience-right-col">
-                <h3 className="experience-role-title">{item.role}</h3>
-                <p className="experience-role-desc">{item.description}</p>
-
-                <ul className="experience-bullets">
-                  {item.bullets.map((bullet, bIdx) => (
-                    <li key={bIdx} className="experience-bullet-item">
-                      <span className="experience-bullet-caret">▸</span>
+              {/* Right Column: Title, Quote Description & Bullets */}
+              <div
+                className="md:w-2/3"
+                style={{
+                  flex: 1,
+                  minWidth: 'min(100%, 360px)',
+                }}
+              >
+                <h3
+                  className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 tracking-tight group-hover:text-cloud transition-colors"
+                  style={{
+                    fontSize: 'clamp(20px, 2.2vw, 28px)',
+                    fontWeight: 700,
+                    color: '#ffffff',
+                    letterSpacing: '-0.01em',
+                    margin: '0 0 10px 0',
+                  }}
+                >
+                  {exp.role}
+                </h3>
+                <p
+                  className="text-xs sm:text-sm md:text-base text-ash leading-relaxed mb-4 sm:mb-6 font-normal"
+                  style={{
+                    color: '#B5B5B5',
+                    fontSize: '14.5px',
+                    lineHeight: 1.65,
+                    margin: '0 0 16px 0',
+                  }}
+                >
+                  "{exp.description}"
+                </p>
+                <ul
+                  className="space-y-2.5"
+                  style={{
+                    listStyle: 'none',
+                    padding: 0,
+                    margin: 0,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '10px',
+                  }}
+                >
+                  {exp.bullets.map((bullet, bIdx) => (
+                    <li
+                      key={bIdx}
+                      className="flex items-start gap-3 text-sm text-silver font-normal"
+                      style={{
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: '12px',
+                        color: '#EDF0F3',
+                        fontSize: '14px',
+                        lineHeight: 1.55,
+                      }}
+                    >
+                      <span
+                        className="text-ember font-bold mt-0.5 text-xs"
+                        style={{
+                          color: 'var(--ember)',
+                          fontWeight: 700,
+                          fontSize: '12px',
+                          marginTop: '2px',
+                          flexShrink: 0,
+                        }}
+                      >
+                        ▸
+                      </span>
                       <span>{bullet}</span>
                     </li>
                   ))}

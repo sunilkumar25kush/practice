@@ -60,6 +60,8 @@ export default function Navbar({ onOpenResume }) {
             className={isMenuOpen ? 'btn-close-glow' : 'navbar-menu-btn'}
             style={{
               padding: '10px 24px',
+              height:'36px',
+              width:'104px',
               borderRadius: 'var(--radius-full)',
               display: 'inline-flex',
               alignItems: 'center',
@@ -99,7 +101,7 @@ export default function Navbar({ onOpenResume }) {
             ) : (
               <>
                 <span>Menu</span>
-                <span style={{ color: '#ffffff', fontWeight: 600, fontSize: '16px', lineHeight: 1 }}>+</span>
+                <span style={{ color: '#ffffff', fontWeight: 600, fontSize: '25px', lineHeight: 1 }}>+</span>
               </>
             )}
           </button>
