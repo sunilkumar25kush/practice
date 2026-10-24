@@ -42,14 +42,15 @@ export default function Experience() {
       ],
     },
     {
-      period: '2023 — 2024',
+      period: '2023 — 2025',
       category: 'Self-Directed Learning',
       role: 'Creative Technologist',
       description:
         'Intensive self-education period exploring web technologies, creative coding, and modern development practices.',
       bullets: [
-        'Completed 500+ hours of hands-on development across modern web stacks',
-        'Mastered React, Node.js, Express, MongoDB, and TypeScript ecosystem',
+        'Completed 500+ hours of hands-on development',
+        'Mastered React, Node.js, and TypeScript ecosystem',
+        'Built portfolio of 15+ production-ready projects',
       ],
     },
   ];
