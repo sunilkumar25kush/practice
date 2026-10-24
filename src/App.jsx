@@ -5,6 +5,7 @@ import Philosophy from './components/Philosophy/Philosophy';
 import Projects from './components/Projects/Projects';
 import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 import ResumeModal from './components/ResumeModal/ResumeModal';
 import './App.css';
 
@@ -40,9 +41,12 @@ export default function App() {
         {/* 4. Where I've Been — Experience Timeline (Screenshots 7 & 8) */}
         <Experience />
 
-        {/* 5. Get In Touch — Contact Details, Form & Footer Bar (Screenshots 2-5) */}
+        {/* 5. Get In Touch — Contact Details & Form (Screenshots 9 & 10) */}
         <Contact onOpenResume={() => setIsResumeOpen(true)} />
       </main>
+
+      {/* 6. Footer (Screenshot 11) */}
+      <Footer />
 
       {/* Interactive Resume View/Print Modal */}
       <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />

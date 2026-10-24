@@ -274,53 +274,55 @@ export default function Hero({ onOpenContact }) {
             <a
               href="#projects"
               data-magnetic="true"
-              className="relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-sm tracking-wide transition-colors duration-300 overflow-hidden cursor-pointer bg-ember text-white hover:bg-ember-bright border border-transparent shadow-[0_0_25px_rgba(160,42,34,0.4)] !rounded-full !px-4 sm:!px-7 !py-2.5 sm:!py-3.5 !text-[11px] sm:!text-[13px] !tracking-wide group touch-manipulation"
+              aria-label="Explore Work →"
+              className="relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-sm tracking-wide transition-all duration-300 overflow-hidden cursor-pointer bg-[#B8342B] text-white hover:bg-[#cc3a30] shadow-[0_0_25px_rgba(184,52,43,0.4)] group touch-manipulation"
               style={{
                 textDecoration: 'none',
-                backgroundColor: 'var(--ember)',
+                backgroundColor: '#B8342B',
                 color: '#ffffff',
-                boxShadow: '0 0 25px rgba(160, 42, 34, 0.4)',
+                boxShadow: '0 0 25px rgba(184, 52, 43, 0.4)',
                 borderRadius: '9999px',
-                padding: '12px 28px',
-                fontSize: '13px',
+                padding: '14px 28px',
+                minWidth: '202px',
+                minHeight: '57.33px',
+                boxSizing: 'border-box',
+                fontSize: '13.5px',
                 fontWeight: 600,
-                letterSpacing: '0.04em',
+                letterSpacing: '0.02em',
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                transition: 'all 0.3s ease',
+                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.backgroundColor = 'var(--ember-bright)';
+                e.currentTarget.style.backgroundColor = '#cc3a30';
                 e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 0 35px rgba(160, 42, 34, 0.7)';
+                e.currentTarget.style.boxShadow = '0 0 35px rgba(184, 52, 43, 0.7)';
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.backgroundColor = 'var(--ember)';
+                e.currentTarget.style.backgroundColor = '#B8342B';
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 0 25px rgba(160, 42, 34, 0.4)';
+                e.currentTarget.style.boxShadow = '0 0 25px rgba(184, 52, 43, 0.4)';
               }}
             >
-              <span className="relative z-10 flex items-center gap-2">
-                <span className="flex items-center gap-2 sm:gap-3">
-                  <span
-                    className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/25 flex items-center justify-center text-xs sm:text-sm"
-                    style={{
-                      width: '26px',
-                      height: '26px',
-                      borderRadius: '50%',
-                      backgroundColor: 'rgba(0, 0, 0, 0.25)',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '13px',
-                    }}
-                  >
-                    ↗
-                  </span>
-                  <span>Explore Work</span>
-                  <span>→</span>
+              <span className="relative z-10 flex items-center gap-2.5">
+                <span
+                  style={{
+                    width: '24px',
+                    height: '24px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(0, 0, 0, 0.25)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '13px',
+                    flexShrink: 0,
+                  }}
+                >
+                  →
                 </span>
+                <span className="font-medium">Explore Work</span>
+                <span className="font-medium">→</span>
               </span>
             </a>
 
@@ -328,31 +330,34 @@ export default function Hero({ onOpenContact }) {
             <a
               href="#contact"
               data-magnetic="true"
+              aria-label="Let's Talk →"
               onClick={e => {
                 if (onOpenContact) {
                   e.preventDefault();
                   onOpenContact();
                 }
               }}
-              className="relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-sm tracking-wide transition-colors duration-300 overflow-hidden cursor-pointer bg-transparent text-white border border-white/20 hover:border-ember/50 hover:text-ember !rounded-full !px-4 sm:!px-6 !py-2.5 sm:!py-3 !text-[11px] sm:!text-[12px] !border-white/15 touch-manipulation"
+              className="relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-sm tracking-wide transition-all duration-300 overflow-hidden cursor-pointer bg-transparent text-white border border-white/20 hover:border-[#B8342B]/60 hover:text-[#B8342B] touch-manipulation"
               style={{
                 textDecoration: 'none',
                 backgroundColor: 'transparent',
                 color: '#ffffff',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
                 borderRadius: '9999px',
-                padding: '11px 24px',
-                fontSize: '12px',
+                padding: '13px 26px',
+                fontSize: '13px',
                 fontWeight: 500,
-                letterSpacing: '0.04em',
+                letterSpacing: '0.02em',
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                transition: 'all 0.3s ease',
+                minHeight: '52px',
+                boxSizing: 'border-box',
+                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.borderColor = 'rgba(160, 42, 34, 0.5)';
-                e.currentTarget.style.color = 'var(--ember)';
+                e.currentTarget.style.borderColor = 'rgba(184, 52, 43, 0.6)';
+                e.currentTarget.style.color = '#B8342B';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={e => {

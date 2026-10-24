@@ -18,6 +18,9 @@
   --color-8: #FFFFFF;
   /* Text Pure White */
 
+  --ember: #B8342B;
+  --ember-bright: #cc3a30;
+
   /* Semantic Aliases */
   --color-bg: var(--color-1);
   --color-bg-card: #15151a;

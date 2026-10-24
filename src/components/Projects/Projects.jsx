@@ -334,8 +334,8 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="relative w-full pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-24 md:pb-36 bg-black z-10 overflow-hidden section projects-section" style={{ backgroundColor: '#000000', paddingTop: 'clamp(48px, 10vh, 120px)', paddingBottom: 'clamp(64px, 14vh, 144px)' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 container" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 clamp(16px, 4vw, 48px)' }}>
+    <section id="projects" className="section projects-section" style={{ backgroundColor: '#111114', paddingTop: '110px', paddingBottom: '120px' }}>
+      <div className="container">
         {/* Header with bottom-to-top animation matching Menu */}
         <div
           ref={headerRef}
