@@ -17,19 +17,21 @@ export default function Navbar({ onOpenResume }) {
   return (
     <>
       <header
+        className="staggered-menu-header"
+        aria-label="Main navigation header"
         style={{
           position: 'fixed',
           top: 0,
           left: 0,
           right: 0,
           zIndex: 95,
-          transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-          padding: isScrolled ? '14px clamp(24px, 4.5vw, 60px)' : '26px clamp(24px, 4.5vw, 60px)',
-          backgroundColor: isScrolled ? 'rgba(17, 17, 20, 0.92)' : 'transparent',
-          backdropFilter: isScrolled ? 'blur(16px)' : 'none',
-          borderBottom: isScrolled ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid transparent',
+          padding: 'clamp(20px, 3.5vh, 28px) clamp(24px, 4.5vw, 60px)',
+          backgroundColor: 'transparent',
+          backdropFilter: 'none',
+          borderBottom: 'none',
           boxSizing: 'border-box',
           width: '100%',
+          pointerEvents: 'none',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
@@ -37,6 +39,7 @@ export default function Navbar({ onOpenResume }) {
           <a
             href="#"
             style={{
+              pointerEvents: 'auto',
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'baseline',
@@ -59,9 +62,10 @@ export default function Navbar({ onOpenResume }) {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={isMenuOpen ? 'btn-close-glow' : 'navbar-menu-btn'}
             style={{
+              pointerEvents: 'auto',
               padding: '10px 24px',
-              height:'36px',
-              width:'104px',
+              height: '36px',
+              width: '104px',
               borderRadius: 'var(--radius-full)',
               display: 'inline-flex',
               alignItems: 'center',
