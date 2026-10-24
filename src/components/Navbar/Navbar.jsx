@@ -57,57 +57,34 @@ export default function Navbar({ onOpenResume }) {
             <span style={{ color: '#A02A22' }}>.</span>
           </a>
 
-          {/* Menu Toggle Button */}
+          {/* Menu Toggle Button (matches reference Screenshot 1) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={isMenuOpen ? 'btn-close-glow' : 'navbar-menu-btn'}
-            style={{
-              pointerEvents: 'auto',
-              padding: '10px 24px',
-              height: '36px',
-              width: '104px',
-              borderRadius: 'var(--radius-full)',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              fontSize: '14px',
-              fontWeight: 600,
-              fontFamily: 'var(--font-primary)',
-              backgroundColor: isMenuOpen ? 'rgba(160, 42, 34, 0.2)' : 'rgba(255, 255, 255, 0.06)',
-              border: isMenuOpen ? '1px solid #A02A22' : '1px solid rgba(255, 255, 255, 0.16)',
-              color: '#ffffff',
-              cursor: 'pointer',
-              backdropFilter: 'blur(12px)',
-              boxShadow: isMenuOpen ? '0 0 20px rgba(160, 42, 34, 0.4)' : 'none',
-              transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
-            }}
-            aria-label="Toggle navigation menu"
-            onMouseEnter={e => {
-              if (!isMenuOpen) {
-                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.12)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.28)';
-                e.currentTarget.style.transform = 'translateY(-1px)';
-              }
-            }}
-            onMouseLeave={e => {
-              if (!isMenuOpen) {
-                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.16)';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }
-            }}
+            className="sm-toggle"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="staggered-menu-panel"
+            type="button"
+            style={{ color: 'rgb(255, 255, 255)' }}
           >
-            {isMenuOpen ? (
-              <>
-                <span>Close</span>
-                <X size={15} style={{ color: 'var(--color-primary)' }} />
-              </>
-            ) : (
-              <>
-                <span>Menu</span>
-                <span style={{ color: '#ffffff', fontWeight: 600, fontSize: '25px', lineHeight: 1 }}>+</span>
-              </>
-            )}
+            <span className="sm-toggle-textWrap" aria-hidden="true">
+              <span
+                className="sm-toggle-textInner"
+                style={{
+                  transform: isMenuOpen ? 'translate(0%, 0%)' : 'translate(0%, -20%)',
+                }}
+              >
+                <span className="sm-toggle-line">Close</span>
+                <span className="sm-toggle-line">Menu</span>
+                <span className="sm-toggle-line">Close</span>
+                <span className="sm-toggle-line">Menu</span>
+                <span className="sm-toggle-line">Menu</span>
+              </span>
+            </span>
+            <span className="sm-icon" aria-hidden="true">
+              <span className="sm-icon-line"></span>
+              <span className="sm-icon-line sm-icon-line-v"></span>
+            </span>
           </button>
         </div>
       </header>
