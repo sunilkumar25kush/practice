@@ -85,6 +85,7 @@ export default function Hero({ onOpenContact }) {
 
       {/* ── Row 2: Giant Outline Letters + Red Middle Tagline ── */}
       <div
+        className="hero-sunil-row"
         style={{
           position: 'relative',
           zIndex: 10,
@@ -94,7 +95,7 @@ export default function Hero({ onOpenContact }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '0 clamp(24px, 4.5vw, 60px)',
+          padding: '0 clamp(24px, 11.5vw, 220px)',
           boxSizing: 'border-box',
           overflow: 'hidden',
           margin: 'auto 0',
@@ -104,7 +105,7 @@ export default function Hero({ onOpenContact }) {
           style={{
             position: 'relative',
             height: '100%',
-            maxHeight: 'clamp(230px, 42vh, 420px)',
+            maxHeight: 'clamp(240px, 44vh, 420px)',
             width: '100%',
             display: 'flex',
             alignItems: 'center',

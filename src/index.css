@@ -666,3 +666,11 @@ body {
 .sm-toggle[aria-expanded="true"] .sm-icon-line {
   background-color: var(--ember, #A02A22);
 }
+
+/* Hero SUNIL Row exact 220px padding on desktop */
+@media (min-width: 1200px) {
+  .hero-sunil-row {
+    padding-left: 220px !important;
+    padding-right: 220px !important;
+  }
+}
